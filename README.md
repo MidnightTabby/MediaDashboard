@@ -15,7 +15,10 @@ If your camera roll, external SSD, or project folder is an absolute graveyard of
 - You just want to **re-encode or match export specs** without decoding cryptic `ffprobe` walls of text.
 
 **MediaDashboard** scans your archive in seconds and outputs a clean, **unquoted UTF-8 TSV** file ready for Excel, Google Sheets, or CLI filtering—helping you spot trash clips to delete and prep the keepers for editing.
+> **"Stop guessing why that 4K clip feels heavy—audit your entire media stash in one clean TSV."**  
+> A fast PowerShell media triage & quality dashboard powered by `ffprobe` (and optional `ffmpeg` audio loudness checks) to help creators declutter raw footage, spot HDR/VFR quirks, and prep exports without opening 40 tabs.
 
+Companion to [**MediaTimestampFixer**](https://github.com/MidnightTabby/MediaTimestampFixer)[cite: 2, 3]. Keep your timestamps straight with one, and inspect your footage specs and audio levels with the other.
 ---
 
 ## ✨ Key Features
@@ -44,32 +47,41 @@ If your camera roll, external SSD, or project folder is an absolute graveyard of
 ## ⚡ Quick Start & Usage
 
 ### 1. Prerequisites
-- **Windows 10 / 11** with **PowerShell 7+** (tested on PowerShell 7.7)
-- **`ffprobe.exe`** (and **`ffmpeg.exe`** if using `-AudioCheck`) placed in the **same directory** as the script.
+- **Windows 10 / 11** (PowerShell 7 recommended / Windows PowerShell 5.1+)
+- **`ffprobe.exe` (Required)** & **`ffmpeg.exe` (Required only with `-AudioCheck`)**:  
+  Official FFmpeg builds for Windows x64 are distributed via trusted community builds:
+  - **Gyan.dev** ([Windows builds](https://www.gyan.dev/ffmpeg/builds/#release-builds)): Download **`ffmpeg-release-essentials.7z`** (lighter and plenty for `MediaDashboard`—includes `ffmpeg.exe`, `ffprobe.exe`, and `ffplay.exe` in folder named `Bin`).
+  - **BtbN** ([FFmpeg-Builds Releases](https://github.com/BtbN/FFmpeg-Builds/releases)): Download the latest **`win64-gpl`** `.zip` archive if you prefer GitHub releases.
+  - Extract `bin\ffprobe.exe` (and `bin\ffmpeg.exe` if you plan to use `-AudioCheck`) into a folder included in your **System PATH**, or place them alongside the script.
 
 ### 2. Folder Structure
-Keep it portable—everything lives in one folder:
+Keep your workspace tidy—put the script in your project/toolkit folder (and `ffprobe.exe` / `ffmpeg.exe` either on your `PATH` or right next to it):
+
 ```text
 📁 MediaDashboard/
- ├── 📜 MediaDashboard_v0.03beta.ps1
- ├── ⚙️ ffprobe.exe
- └── ⚙️ ffmpeg.exe   (optional, required for -AudioCheck)
-```
+ ├── 📜 MediaDashboardv0.03beta.ps1
+ ├── ⚙️ ffprobe.exe          # Optional if already in System PATH
+ └── ⚙️ ffmpeg.exe           # Optional (only needed with -AudioCheck)
+ ```
 
 ### 3. Run the Scanner
 Open PowerShell in your folder and run:
 
+### Fast scan (everyday triage—resolution, HDR, FPS, YouTube flags)[cite: 2]:
 ```powershell
-# Fast metadata-only scan (scans current directory recursively)
 .\MediaDashboard_v0.03beta.ps1 -TargetPath "D:\Videos\Chaos_Archive" -OutputTsv ".\media_dashboard.tsv"
+```
 
-# Deep scan with audio volume diagnostics (flags LOW_VOL & CLIP)
+### Audio check mode (adds Measured_dB, Peak_dB, and Audio_Flag)[cite: 1, 2]:
+```powershell
 .\MediaDashboard_v0.03beta.ps1 -TargetPath "D:\Videos\Chaos_Archive" -OutputTsv ".\media_dashboard.tsv" -AudioCheck
 ```
 
 #### Optional Parameters
 - `-LowVolThresholdDb` (Default: `-24.0`): Adjust sensitivity for `LOW_VOL` flags.
 - `-ClipPeakThresholdDb` (Default: `-0.1`): Adjust peak threshold for `CLIP` warnings.
+
+### 4. Open the generated .tsv in Excel, Google Sheets, or your favorite viewer to filter, sort, and make quick storage/edit calls.
 
 ---
 
@@ -84,3 +96,13 @@ Open PowerShell in your folder and run:
 - **FFmpeg / ffprobe Team**: For powering practically every media pipeline on planet Earth.
 - **Author**: **MidnightTabby** — fueled by late-night coffee and an urge to bring *Aesthetic peacekeeping* to messy hard drives.
 - **AI Collaborator**: **Gemini** — helping translate late-night workflow ideas and real-world creator headaches into clean PowerShell.
+
+---
+
+## 💡 Pro Tips & Shortcuts
+
+- **CLI / `winget` shortcut**: Prefer installing via terminal? Run `winget install --id=Gyan.FFmpeg -e` in PowerShell, then restart your terminal so `PATH` updates pick up `ffprobe.exe` and `ffmpeg.exe`.
+
+- **`essentials` vs. `full`**: `MediaDashboard` only needs `ffprobe` and `ffmpeg` (volumedetect), so `release essentials` saves bandwidth and disk space without sacrificing functionality.
+
+- **Test small first**: Point `-TargetPath` at a single folder of mixed clips before scanning a massive multi-terabyte archive.
