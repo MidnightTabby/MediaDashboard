@@ -1,4 +1,4 @@
-# 📊 MediaDashboard v0.03beta
+# 📊 MediaDashboard_v0.03beta
 
 > **"Why is this 12-second phone clip 400MB and why can't anyone hear me?!"**  
 > A fast, zero-bloat PowerShell + `ffprobe`/`ffmpeg` scanner that turns your chaotic video folder into a clean, human-readable TSV dashboard.  
@@ -15,10 +15,10 @@ If your camera roll, external SSD, or project folder is an absolute graveyard of
 - You just want to **re-encode or match export specs** without decoding cryptic `ffprobe` walls of text.
 
 **MediaDashboard** scans your archive in seconds and outputs a clean, **unquoted UTF-8 TSV** file ready for Excel, Google Sheets, or CLI filtering—helping you spot trash clips to delete and prep the keepers for editing.
-> **"Stop guessing why that 4K clip feels heavy—audit your entire media stash in one clean TSV."**  
-> A fast PowerShell media triage & quality dashboard powered by `ffprobe` (and optional `ffmpeg` audio loudness checks) to help creators declutter raw footage, spot HDR/VFR quirks, and prep exports without opening 40 tabs.
+**"Stop guessing why that 4K clip feels heavy—audit your entire media stash in one clean TSV."**  
+A fast PowerShell media triage & quality dashboard powered by `ffprobe` (and optional `ffmpeg` audio loudness checks) to help creators declutter raw footage, spot HDR/VFR quirks, and prep exports without opening 40 tabs.
 
-Companion to [**MediaTimestampFixer**](https://github.com/MidnightTabby/MediaTimestampFixer)[cite: 2, 3]. Keep your timestamps straight with one, and inspect your footage specs and audio levels with the other.
+Companion to [**MediaTimestampFixer**](https://github.com/MidnightTabby/MediaTimestampFixer). Keep your timestamps straight with one, and inspect your footage specs and audio levels with the other.
 ---
 
 ## ✨ Key Features
@@ -50,7 +50,7 @@ Companion to [**MediaTimestampFixer**](https://github.com/MidnightTabby/MediaTim
 - **Windows 10 / 11** (PowerShell 7 recommended / Windows PowerShell 5.1+)
 - **`ffprobe.exe` (Required)** & **`ffmpeg.exe` (Required only with `-AudioCheck`)**:  
   Official FFmpeg builds for Windows x64 are distributed via trusted community builds:
-  - **Gyan.dev** ([Windows builds](https://www.gyan.dev/ffmpeg/builds/#release-builds)): Download **`ffmpeg-release-essentials.7z`** (lighter and plenty for `MediaDashboard`—includes `ffmpeg.exe`, `ffprobe.exe`, and `ffplay.exe` in folder named `Bin`).
+  - **Gyan.dev** ([Windows builds](https://www.gyan.dev/ffmpeg/builds/#release-builds)): Download **`ffmpeg-release-essentials.zip`** (lighter and plenty for `MediaDashboard`—includes `ffmpeg.exe`, `ffprobe.exe`, and `ffplay.exe` in folder named `bin`).
   - **BtbN** ([FFmpeg-Builds Releases](https://github.com/BtbN/FFmpeg-Builds/releases)): Download the latest **`win64-gpl`** `.zip` archive if you prefer GitHub releases.
   - Extract `bin\ffprobe.exe` (and `bin\ffmpeg.exe` if you plan to use `-AudioCheck`) into a folder included in your **System PATH**, or place them alongside the script.
 
@@ -59,7 +59,7 @@ Keep your workspace tidy—put the script in your project/toolkit folder (and `f
 
 ```text
 📁 MediaDashboard/
- ├── 📜 MediaDashboardv0.03beta.ps1
+ ├── 📜 MediaDashboard_v0.03beta.ps1
  ├── ⚙️ ffprobe.exe          # Optional if already in System PATH
  └── ⚙️ ffmpeg.exe           # Optional (only needed with -AudioCheck)
  ```
@@ -67,12 +67,12 @@ Keep your workspace tidy—put the script in your project/toolkit folder (and `f
 ### 3. Run the Scanner
 Open PowerShell in your folder and run:
 
-### Fast scan (everyday triage—resolution, HDR, FPS, YouTube flags)[cite: 2]:
+#### Fast scan (everyday triage—resolution, HDR, FPS, YouTube flags)[cite: 2]:
 ```powershell
 .\MediaDashboard_v0.03beta.ps1 -TargetPath "D:\Videos\Chaos_Archive" -OutputTsv ".\media_dashboard.tsv"
 ```
 
-### Audio check mode (adds Measured_dB, Peak_dB, and Audio_Flag)[cite: 1, 2]:
+#### Audio check mode (adds Measured_dB, Peak_dB, and Audio_Flag)[cite: 1, 2]:
 ```powershell
 .\MediaDashboard_v0.03beta.ps1 -TargetPath "D:\Videos\Chaos_Archive" -OutputTsv ".\media_dashboard.tsv" -AudioCheck
 ```
