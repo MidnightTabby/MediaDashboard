@@ -113,7 +113,7 @@ Open PowerShell in your folder and run:
 
 Before running deep media scans, heavy metadata/audio checks, or full hash comparisons across massive folders, use these three lightweight PowerShell snippets. They evolve the classic DOS/PowerShell `>` pipe/redirect workflow into clean, tab-separated (`TSV`) files with timestamps—zero extra installs, zero edits to your original files.
 
-<p align="left">
+<p align="right">
   <img src="./images/openwithpwsh.png" alt="Run w/ PowerShell">
 </p>
 
