@@ -113,9 +113,15 @@ Open PowerShell in your folder and run:
 
 Before running deep media scans, heavy metadata/audio checks, or full hash comparisons across massive folders, use these three lightweight PowerShell snippets. They evolve the classic DOS/PowerShell `>` pipe/redirect workflow into clean, tab-separated (`TSV`) files with timestamps—zero extra installs, zero edits to your original files.
 
-<p align="right">
+<p align="left">
   <img src="./images/openwithpwsh.png" alt="Run w/ PowerShell">
 </p>
+
+> **📌 How to Run Any Snippet Below (No Terminal Needed)**
+> 1. **Copy** the PowerShell code block below.
+> 2. Save it in your target folder as a `.ps1` file (e.g., `scan_files.ps1`) encoded in **UTF-8**.
+> 3. In Windows File Explorer, **right-click** the `.ps1` file and select **Run with PowerShell** (see image above).
+> 4. Check the generated `*.tsv` report right next to your script—your original files are never modified.
 
 ## 1. Fast Recursive File & Size Inventory (`filelist_*.tsv`)
 
