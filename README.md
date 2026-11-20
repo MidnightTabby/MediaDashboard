@@ -113,6 +113,10 @@ Open PowerShell in your folder and run:
 
 Before running deep media scans, heavy metadata/audio checks, or full hash comparisons across massive folders, use these three lightweight PowerShell snippets. They evolve the classic DOS/PowerShell `>` pipe/redirect workflow into clean, tab-separated (`TSV`) files with timestamps—zero extra installs, zero edits to your original files.
 
+<p align="right">
+  <img src="./images/openwithpwsh" alt="Run w/ PowerShell" width="100%">
+</p>
+
 ## 1. Fast Recursive File & Size Inventory (`filelist_*.tsv`)
 
 Want a quick list of **every file, size in MB, and last modified date** across a folder (including subfolders)? Press **Enter** to scan your current folder—or paste any folder path you want to check:
@@ -134,7 +138,7 @@ Get-ChildItem -Path $TargetDir -Recurse -File -ErrorAction SilentlyContinue |
     Select-Object FullName,
         @{Name = "Size_MB"; Expression = { [math]::Round($_.Length / 1MB, 2) }},
         LastWriteTime |
-    Export-Csv -Path $OutFile -Delimiter "`t" -NoTypeInformation -Encoding UTF8
+    Export-Csv -Path $OutFile -Delimiter "`t" -Encoding UTF8
 
 $Elapsed = (Get-Date) - $StartTime
 Add-Content -Path $OutFile -Value "`nElapsed: $($Elapsed.ToString('hh\:mm\:ss'))" -Encoding UTF8
@@ -161,7 +165,7 @@ Get-ChildItem -LiteralPath $TargetDir -Recurse -File -ErrorAction SilentlyContin
         @{Name = "Count"; Expression = { $_.Count }},
         @{Name = "Total_MB"; Expression = { [math]::Round((($_.Group | Measure-Object Length -Sum).Sum / 1MB), 2) }} |
     Sort-Object Total_MB -Descending |
-    Export-Csv -Path $OutFile -Delimiter "`t" -NoTypeInformation -Encoding UTF8
+    Export-Csv -Path $OutFile -Delimiter "`t" -Encoding UTF8
 
 Write-Host "Saved -> $OutFile"
 ```
@@ -186,7 +190,7 @@ Get-ChildItem -LiteralPath $TargetDir -Recurse -File -ErrorAction SilentlyContin
             @{Name = "Size_MB"; Expression = { [math]::Round($_.Length / 1MB, 2) }},
             Name, FullName, LastWriteTime
     } |
-    Export-Csv -Path $OutFile -Delimiter "`t" -NoTypeInformation -Encoding UTF8
+    Export-Csv -Path $OutFile -Delimiter "`t" -Encoding UTF8
 
 Write-Host "Saved -> $OutFile"
 ```
