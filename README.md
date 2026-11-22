@@ -1,4 +1,4 @@
-# 📊 MediaDashboard_v0.03beta
+# 📊 MediaDashboard_v0.04beta
 
 > Fast PowerShell & ffprobe media dashboard outputting unquoted TSV to audit footage specs, HDR/FPS quirks, audio levels, and YouTube readiness.
 
@@ -84,7 +84,7 @@ Open PowerShell in your folder and run:
 ---
 
 ## 🗺️ Roadmap (Coming Soon)
-- **Suggested Gain Hints**: Pair `LOW_VOL` with estimated boost hints (e.g., `+12dB` headroom guide) while keeping `Peak_dB` in check.
+- **Suggested Gain Hints**: Pair `LOW_VOL` with estimated boost hints (e.g., `+12dB` headroom guide) while keeping `Peak_dB` in check. w/0.04beta
 - **Flexible Date Formatting**: Keep ISO default sorting while offering optional US-friendly date formats (`MM/dd/yyyy`, casual `WED Sept 21 6p` style notes).
 - **Cross-Platform / Lightweight Helper**: Exploring standalone Go helpers for zero-dependency portability across Windows, macOS, and Chromebook (Linux).
 
