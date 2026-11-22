@@ -1,8 +1,10 @@
 # 📊 MediaDashboard_v0.03beta
 
-> **"Why is this 12-second phone clip 400MB and why can't anyone hear me?!"**  
-> A fast, zero-bloat PowerShell + `ffprobe`/`ffmpeg` scanner that turns your chaotic video folder into a clean, human-readable TSV dashboard.  
-> Built by **MidnightTabby** in the dead of night—engineered for Gen-Z creators, students, and digital packrats who want order without opening 500 files one by one.
+### ⚡ TL;DR
+* **Zero-byte edits:** Only updates file system timestamps—your original bytes and metadata stay 100% untouched[cite: 1, 3].
+* **Built for messy archives:** Camera rolls, old phones, dashcams, screenshots, and "historical" folders[cite: 1, 3].
+* **Portable & lightweight:** Runs via PowerShell with no heavy setup[cite: 1, 3].
+* **Made by MidnightTabby:** Fueled by late nights, regexes, and a desire to keep your timeline in order[cite: 1].
 
 ---
 
