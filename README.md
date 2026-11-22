@@ -6,7 +6,8 @@
 * **Portable & lightweight:** Runs via PowerShell with no heavy setup[cite: 1, 3].
 * **Made by MidnightTabby:** Fueled by late nights, regexes, and a desire to keep your timeline in order[cite: 1].
 
----
+![MediaDashboard 4-Koma Comic](./images/mediadashboard_4koma.png)
+
 
 ## 🚀 Why This Exists
 
