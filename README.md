@@ -1,7 +1,8 @@
 # 📊 MediaDashboard_v0.03beta
 
-![MediaDashboard 4-Koma Comic](./images/mediadashboard_4koma.png)
+> Fast PowerShell & ffprobe media dashboard outputting unquoted TSV to audit footage specs, HDR/FPS quirks, audio levels, and YouTube readiness.
 
+![MediaDashboard 4-Koma Comic](./images/mediadashboard_4koma.png)
 
 ## 🚀 Why This Exists
 
