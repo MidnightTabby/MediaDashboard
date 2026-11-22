@@ -90,6 +90,14 @@ Open PowerShell in your folder and run:
 
 ---
 
+# Changelog
+## [v0.04] - 2026-11-23 (Pre-release)
+### Added
+- **Simultaneous 3-Format Export:** Generates `.tsv` (UTF-8 BOM), `.html` (inline CSS3 with summary cards & filter), and `.json` together.
+- **Highlighted HDR & Resolution Views:** Easy visual scanning for 4K/8K, HDR/Dolby Vision, VFR, and `-AudioCheck` flags.
+  
+---
+
 ## ☕ Credits & Behind the Scenes
 - **FFmpeg / ffprobe Team**: For powering practically every media pipeline on planet Earth.
 - **Author**: **MidnightTabby** — fueled by late-night coffee and an urge to bring *Aesthetic peacekeeping* to messy hard drives.
