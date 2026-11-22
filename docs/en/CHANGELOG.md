@@ -1,6 +1,21 @@
 # Changelog (English)
 
-## [v0.03beta] - 2026-11-19 (Pre-release)
+### 📊 MediaDashboard v0.04beta - 2026-11-23 (Pre-release)
+Fast PowerShell & ffprobe media dashboard outputting unquoted TSV, inline-CSS3 HTML, and JSON to audit footage specs, HDR/FPS quirks, audio levels, and YouTube readiness.
+
+#### ✨ What's New in v0.04beta
+- **Simultaneous 3-Format Export:** Generates `.tsv` (UTF-8 BOM), `.html` (inline CSS3 with summary cards & filter), and `.json` together.
+- **Highlighted HDR & Resolution Views:** Easy visual scanning for 4K/8K, HDR/Dolby Vision, VFR, and `-AudioCheck` flags.
+
+#### ⚙️ Requirements
+- Windows 10 / 11 (PowerShell 5.1+ / PowerShell 7)
+- `ffprobe.exe` (`ffmpeg.exe` required when using `-AudioCheck`)
+
+*Built by MidnightTabby.*
+
+---
+
+### 📊 MediaDashboard v0.03beta - 2026-11-19 (Pre-release)
 
 > **"Fast, Unquoted TSV Media & YouTube-Readiness Dashboard"**  
 > Scan chaotic video archives in seconds, spot unused clips before editing, and keep re-encoding specs at your fingertips.
