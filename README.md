@@ -1,11 +1,5 @@
 # 📊 MediaDashboard_v0.03beta
 
-### ⚡ TL;DR
-* **Zero-byte edits:** Only updates file system timestamps—your original bytes and metadata stay 100% untouched[cite: 1, 3].
-* **Built for messy archives:** Camera rolls, old phones, dashcams, screenshots, and "historical" folders[cite: 1, 3].
-* **Portable & lightweight:** Runs via PowerShell with no heavy setup[cite: 1, 3].
-* **Made by MidnightTabby:** Fueled by late nights, regexes, and a desire to keep your timeline in order[cite: 1].
-
 ![MediaDashboard 4-Koma Comic](./images/mediadashboard_4koma.png)
 
 
