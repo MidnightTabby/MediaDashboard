@@ -1,6 +1,8 @@
-# Changelog (English)
+# Changelog
+> Fast, Unquoted TSV/html/json Media & YouTube-Readiness Dashboard
+> Scan chaotic video archives in seconds, spot unused clips before editing, and keep re-encoding specs at your fingertips.
 
-### 📊 MediaDashboard v0.04beta - 2026-11-23 (Pre-release)
+## 📊 MediaDashboard v0.04beta - 2026-11-23 (Pre-release)
 Fast PowerShell & ffprobe media dashboard outputting unquoted TSV, inline-CSS3 HTML, and JSON to audit footage specs, HDR/FPS quirks, audio levels, and YouTube readiness.
 
 #### ✨ What's New in v0.04beta
@@ -15,10 +17,7 @@ Fast PowerShell & ffprobe media dashboard outputting unquoted TSV, inline-CSS3 H
 
 ---
 
-### 📊 MediaDashboard v0.03beta - 2026-11-19 (Pre-release)
-
-> **"Fast, Unquoted TSV Media & YouTube-Readiness Dashboard"**  
-> Scan chaotic video archives in seconds, spot unused clips before editing, and keep re-encoding specs at your fingertips.
+## 📊 MediaDashboard v0.03beta - 2026-11-19 (Pre-release)
 
 ### ✨ What's New & Key Features
 - **Optimized Re-Encode Column Order**: Arranged columns into a natural workflow (`File Info` → `Video Specs` → `Audio Specs` → `YT Readiness Flags` → `Audio Diagnostics`).
