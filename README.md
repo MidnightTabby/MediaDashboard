@@ -1,5 +1,7 @@
 # 📊 MediaDashboard_v0.04beta
 
+> **Note:** We are currently testing a next-generation version without external helpers that is much faster than this version (~0.27s/file), aiming for ~0.02s/file.
+
 > Fast PowerShell & ffprobe media dashboard outputting unquoted TSV to audit footage specs, HDR/FPS quirks, audio levels, and YouTube readiness.
 
 ![MediaDashboard 4-Koma Comic](./images/mediadashboard_4koma.png)
@@ -84,7 +86,7 @@ Open PowerShell in your folder and run:
 ---
 
 ## 🗺️ Roadmap (Coming Soon)
-- **Suggested Gain Hints**: Pair `LOW_VOL` with estimated boost hints (e.g., `+12dB` headroom guide) while keeping `Peak_dB` in check. w/0.04beta
+- Suggested Gain Hints: Pair LOW_VOL with estimated boost hints (e.g., +12dB headroom guide) while keeping Peak_dB in check. w/0.04beta
 - **Flexible Date Formatting**: Keep ISO default sorting while offering optional US-friendly date formats (`MM/dd/yyyy`, casual `WED Sept 21 6p` style notes).
 - **Cross-Platform / Lightweight Helper**: Exploring standalone Go helpers for zero-dependency portability across Windows, macOS, and Chromebook (Linux).
 
